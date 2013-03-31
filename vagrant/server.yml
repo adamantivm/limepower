@@ -1,0 +1,16 @@
+---
+
+- name: local server configuration
+  hosts: webservers
+  user: vagrant
+  sudo: True
+
+  vars:
+    - webapps_dir: /home/vagrant
+    - app_name: limepower
+    - server_type: local
+
+  tasks:
+    - include: tasks/developer_tools.yml
+    - include: tasks/python_build_tools.yml
+    - include: tasks/django.yml

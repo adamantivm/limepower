@@ -1,0 +1,39 @@
+---
+
+#-------------
+# VCS
+#-------------
+
+- name: install git
+  action: apt pkg=git state=present
+
+#-------------
+# Django
+#-------------
+
+- name: install system requirements for gevent stack.
+  action: apt pkg=$item state=present
+  with_items:
+    - libevent-2.0-5
+    - libevent-dev
+
+- name: installing the dateutil library for python.
+  action: apt pkg=python-dateutil state=present
+
+- name: install specific version of django
+  action: pip name=django version=1.5.1
+
+- name: install specific version of django-rest-framework
+  action: pip name=djangorestframework version=2.2.5
+
+- name: install django pip packages
+  action: pip name=$item state=present
+  with_items:
+    - south
+    - gevent-socketio
+#    - python-openid
+#    - django-openid-auth
+#    - pillow
+#    - mock
+#    - gevent_zeromq
+
