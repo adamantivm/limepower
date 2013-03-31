@@ -36,3 +36,5 @@ nosetests.xml
 
 # vagrant
 .vagrant
+# django
+server.db
