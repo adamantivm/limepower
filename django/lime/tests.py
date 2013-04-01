@@ -32,3 +32,10 @@ class PersonTest(TestCase):
         # Test it is possible to get from one user to the related other
         self.assertEqual(tessa, julian.loves)
         self.assertEqual(julian, tessa.loves)
+
+    def test_gender(self):
+        tessa = Person.objects.get(pk=1)
+        self.assertEqual('female', tessa.gender)
+
+        julian = Person.objects.get(pk=2)
+        self.assertEqual('male', julian.gender)

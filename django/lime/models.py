@@ -23,6 +23,9 @@ class Person(models.Model):
     status = models.BooleanField()
     last_updated = models.DateTimeField(auto_now=True)
 
+    # Gender, "male" or "female"
+    gender = models.CharField(max_length=10, blank=False)
+
     # Calculated field: which other user is this user
     # connected to?
     def get_related_person(self):
