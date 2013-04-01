@@ -3,7 +3,15 @@ limepower
 
 First cut lime service
 
-## Vagrant
+## Development environment
+
+### Running the test server:
+
+Inside the Vagrant box:
+```
+cd django
+./runserver.py
+```
 
 ## Public Deploy Stuff
 
