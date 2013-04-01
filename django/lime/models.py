@@ -22,3 +22,11 @@ class Person(models.Model):
     # This person's online status
     status = models.BooleanField()
     last_updated = models.DateTimeField(auto_now=True)
+
+    # Calculated field: which other user is this user
+    # connected to?
+    def get_related_person(self):
+        res = Person.objects.filter(relationship=self.relationship).exclude(id=self.id)
+        return res[0]
+
+    loves = property(get_related_person)
