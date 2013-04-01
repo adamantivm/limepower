@@ -1,0 +1,19 @@
+<html>
+<head>
+<script type="text/javascript" src="lib/socket.io.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script>
+$('document').ready(function(){
+  alert('hw');
+  var sock = io.connect('/lime');
+  sock.on('pong',function(data){
+    alert('pong: ' + data);
+  });
+  sock.emit('ping','mork');
+});
+</script>
+</head>
+<body>
+<span id="content">Hw!</span>
+</body>
+</html>
