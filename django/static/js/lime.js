@@ -3,7 +3,7 @@ $('document').ready(function(){
   var sock = io.connect('/lime');
   sock.on('value', updateLimes);
   sock.on('connect',function(){
-    sock.emit('connected');
+    sock.emit('connected',1);
   });
   sock.on('disconnect', resetLimes);
   $('#my-status').on('click',function() {
