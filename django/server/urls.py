@@ -1,6 +1,9 @@
 from django.conf.urls import patterns, include, url
 from django.views.generic.base import RedirectView
 
+# Adding a new Socket.IO Namespace:
+# 1- Import the namespace Class here (where the code actually is)
+# 2- Add it to the second parameter to socketio_manage below
 from lime.socket import LimeNamespace
 
 from socketio import socketio_manage
