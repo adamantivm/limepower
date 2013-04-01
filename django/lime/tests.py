@@ -20,7 +20,7 @@ class PersonTest(TestCase):
 
     def test_person(self):
         # Test fetching known fixture People by ID
-        tessa = Person.objects.get(pk=1)
+        tessa = Person.objects.get(pk=3)
         self.assertEqual("Tessa Lau", tessa.name)
 
         julian = Person.objects.get(pk=2)
@@ -34,7 +34,7 @@ class PersonTest(TestCase):
         self.assertEqual(julian, tessa.loves)
 
     def test_gender(self):
-        tessa = Person.objects.get(pk=1)
+        tessa = Person.objects.get(pk=3)
         self.assertEqual('female', tessa.gender)
 
         julian = Person.objects.get(pk=2)

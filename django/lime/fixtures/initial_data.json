@@ -1,48 +1,58 @@
 [
- {"pk": 1,
- "model": "auth.user",
- "fields": {
-   "username": "cygx1",
-   "first_name": "",
-   "last_name": "",
-   "is_active": true,
-   "is_superuser": true,
-   "is_staff": true,
-   "last_login": "2013-04-01T00:45:37.206Z",
-   "groups": [],
-   "user_permissions": [],
-   "password": "pbkdf2_sha256$10000$G5AkxnxC4XnL$hFfdOQj/eqj2VttyNDc2mRPiZjcH4dkurX/dHiSIa3s=",
-   "email": "jt@tlau.org",
-   "date_joined": "2013-04-01T00:45:37.206Z"
-   }
- },
-
- {"pk": 1,
-  "model": "lime.relationship",
+{
+  "pk": 1, 
+  "model": "lime.relationship", 
   "fields": {}
- },
- {"pk": 1,
-  "model": "lime.person",
+},
+{
+  "pk": 1, 
+  "model": "lime.person", 
   "fields": {
-    "name": "Tessa Lau",
-    "relationship": 1,
-    "email": "tlau@tlau.org",
-    "nickname": "My love",
-    "gender": "female",
-    "status": false,
-    "last_updated": "2013-04-01 17:41:00-08:00"
-   }
- },
- {"pk": 2,
-  "model": "lime.person",
+    "status": false, 
+    "last_updated": "2013-04-01T05:38:20.988Z", 
+    "name": "Julian and Tessa", 
+    "relationship": null, 
+    "gender": "Both", 
+    "is_active": true, 
+    "last_login": "2013-04-01T05:38:20.908Z", 
+    "is_admin": true, 
+    "password": "pbkdf2_sha256$10000$tgdzIOPUbhNx$dxZOBEdajsdMcss95UwM4Hpm5Y2AxFAFzg32hkrU038=", 
+    "nickname": "", 
+    "email": "jt@tlau.org"
+  }
+},
+{
+  "pk": 2, 
+  "model": "lime.person", 
   "fields": {
-    "name": "Julian Cerruti",
-    "relationship": 1,
-    "email": "jcerruti@gmail.com",
-    "nickname": "Little beautiful",
-    "gender": "male",
-    "status": false,
-    "last_updated": "2013-04-01 17:41:00-08:00"
-   }
- }
+    "status": false, 
+    "last_updated": "2013-04-01T05:55:33.216Z", 
+    "name": "Julian Cerruti", 
+    "relationship": 1, 
+    "gender": "male", 
+    "is_active": true, 
+    "last_login": "2013-04-01T05:55:20.140Z", 
+    "is_admin": false, 
+    "password": "pbkdf2_sha256$10000$oTKAIoDlosqM$8J13EKdax1pZTK0T+wH5/qqbN9nOXJQd1zkB7FlBbjs=", 
+    "nickname": "", 
+    "email": "jcerruti@gmail.com"
+  }
+},
+{
+  "pk": 3, 
+  "model": "lime.person", 
+  "fields": {
+    "status": false, 
+    "last_updated": "2013-04-01T05:56:01.312Z", 
+    "name": "Tessa Lau", 
+    "relationship": 1, 
+    "gender": "female", 
+    "is_active": true, 
+    "last_login": "2013-04-01T05:55:56.762Z", 
+    "is_admin": false, 
+    "password": "pbkdf2_sha256$10000$s9ClpYynfWkv$VHp+FNxeBPFn5CBveYzHvQPutbs/V5dypG2FZmlGUK4=", 
+    "nickname": "", 
+    "email": "tlau@tlau.org"
+  }
+}
 ]
