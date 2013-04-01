@@ -3,7 +3,7 @@ limepower
 
 First cut lime service
 
-## Vagrant / local development
+## Development environment
 
 ### Running the test server:
 
