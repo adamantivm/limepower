@@ -1,5 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.views.generic.base import RedirectView
+from django.http import HttpResponse
 
 # Adding a new Socket.IO Namespace:
 # 1- Import the namespace Class here (where the code actually is)
@@ -10,6 +11,7 @@ from socketio import socketio_manage
 
 def socketio_hookup(request):
     socketio_manage(request.environ, {LimeNamespace.name: LimeNamespace}, request)
+    return HttpResponse("Socket connection ended")
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
