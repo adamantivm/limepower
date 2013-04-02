@@ -6,7 +6,7 @@ $('document').ready(function(){
     sock.emit('connected',1);
   });
   sock.on('disconnect', resetLimes);
-  $('#heart').on('click',function() {
+  $('#heart-container').on('click',function() {
     newval = ($('#my-status').html() == 'online') ? 0 : 1;
     updateLime( 'my-status', newval ? 'online': 'offline');
     updateHeart();
@@ -38,14 +38,15 @@ function updateHeart() {
   var me = $('#my-status').html() == 'online';
   var them = $('#her-status').html() == 'online';
 
-  var img = $('#heart');
-  if (me && them) {
-    img.attr('src', 'img/heart-full.png'); 
-  } else if (me) {
-    img.attr('src', 'img/heart-left.png'); 
-  } else if (them) {
-    img.attr('src', 'img/heart-right.png'); 
+  if (me) {
+    $('#heart-left').removeClass('transparent');
   } else {
-    img.attr('src', 'img/heart-outline.png'); 
+    $('#heart-left').addClass('transparent');
+  }
+
+  if (them) {
+    $('#heart-right').removeClass('transparent');
+  } else {
+    $('#heart-right').addClass('transparent');
   }
 }
