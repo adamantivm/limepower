@@ -26,14 +26,14 @@
   "model": "lime.person", 
   "fields": {
     "status": false, 
-    "last_updated": "2013-04-01T05:55:33.216Z", 
+    "last_updated": "2013-04-02T04:34:55.703Z", 
     "name": "Julian Cerruti", 
     "relationship": 1, 
     "gender": "male", 
     "is_active": true, 
-    "last_login": "2013-04-01T05:55:20.140Z", 
+    "last_login": "2013-04-02T04:18:55.382Z", 
     "is_admin": false, 
-    "password": "pbkdf2_sha256$10000$oTKAIoDlosqM$8J13EKdax1pZTK0T+wH5/qqbN9nOXJQd1zkB7FlBbjs=", 
+    "password": "pbkdf2_sha256$10000$KGWBF4QYhdeR$d/IMApeIcJuLtg+sW1WYrRVMT3hhV/2LnsSDLtCJD1c=", 
     "nickname": "", 
     "email": "jcerruti@gmail.com"
   }
@@ -42,15 +42,15 @@
   "pk": 3, 
   "model": "lime.person", 
   "fields": {
-    "status": false, 
-    "last_updated": "2013-04-01T05:56:01.312Z", 
+    "status": true, 
+    "last_updated": "2013-04-02T05:20:19.888Z", 
     "name": "Tessa Lau", 
     "relationship": 1, 
     "gender": "female", 
     "is_active": true, 
-    "last_login": "2013-04-01T05:55:56.762Z", 
+    "last_login": "2013-04-02T04:20:44.556Z", 
     "is_admin": false, 
-    "password": "pbkdf2_sha256$10000$s9ClpYynfWkv$VHp+FNxeBPFn5CBveYzHvQPutbs/V5dypG2FZmlGUK4=", 
+    "password": "pbkdf2_sha256$10000$KSxhfbnJLk6A$5+M5+UVwwo7vqjIz3p9PfUUZi7eCt4ETC6x5eikzF7I=", 
     "nickname": "", 
     "email": "tlau@tlau.org"
   }
