@@ -125,11 +125,13 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
-    'lime'
+    'lime',
+    'server'
 )
 
 # Configure a custom User object
 AUTH_USER_MODEL = 'lime.Person'
+LOGIN_URL = '/login'
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
