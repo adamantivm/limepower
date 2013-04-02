@@ -23,16 +23,10 @@
   </head>
 
   <body>
-
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="#">Love limes</a>
+         <a class="brand" href="#">Love limes</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
@@ -49,10 +43,10 @@
       <h1>Log in to limes</h1>
       <p>Hello, who are you?</p>
 
-      <form>
+      <form method='post' action='/login'>
       	<input type="text" name="username"><br>
       	<input type="password" name="password"><br>
-	<input type="submit" value="Login">
+	    <input type="submit" value="Login">
       </form>
 
     </div> <!-- /container -->
