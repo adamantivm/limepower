@@ -14,6 +14,11 @@
   transition: opacity 1s ease-in-out;
 }
 
-#heart-container img.transparent {
+#heart-container img.transparent-true {
   opacity: 0;
 }
+
+#heart-container img.transparent-false {
+  opacity: 100;
+}
+

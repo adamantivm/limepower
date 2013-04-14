@@ -1,52 +1,43 @@
-$('document').ready(function(){
-  resetLimes();
-  var sock = io.connect('/lime');
-  sock.on('value', updateLimes);
-  sock.on('connect',function(){
-    sock.emit('connected',1);
+function LimeCtrl($scope) {
+  $scope.myStatus = false;
+  $scope.theirStatus = false;
+
+  $scope.resetStatus = function() {
+    $scope.myStatus = false;
+    $scope.theirStatus = false;
+  };
+
+  $scope.updateLime = function(which, text) {
+    if (which == 'my-status') {
+      $scope.myStatus = text;
+    } else if (which == 'her-status') {
+      $scope.theirStatus = text;
+    }
+  };
+
+  $scope.updateLimes = function(newvalues) {
+    console.log('received new lime statii:', newvalues);
+    $scope.myStatus = newvalues['my-status'];
+    $scope.theirStatus = newvalues['her-status'];
+  };
+
+  $scope.toggleMyStatus = function() {
+    $scope.myStatus = !$scope.myStatus;
+  };
+
+  $scope.getStatusText = function(val) {
+    return val ? 'online' : 'offline';
+  };
+
+  $('document').ready(function(){
+    $scope.resetStatus();
+    var sock = io.connect('/lime');
+    sock.on('value', $scope.updateLimes);
+    sock.on('connect',function(){
+      sock.emit('connected',1);
+    });
+    sock.on('disconnect', $scope.resetLimes);
+
   });
-  sock.on('disconnect', resetLimes);
-  $('#heart-container').on('click',function() {
-    newval = ($('#my-status').html() == 'online') ? 0 : 1;
-    updateLime( 'my-status', newval ? 'online': 'offline');
-    updateHeart();
-    sock.emit('changed', newval);
-  });
-});
+};
 
-/*
- Set the limes to an initial (unknown / disconnected) state
- */
-function resetLimes() {
-  ['her-status','my-status'].map(function(lime){
-    updateLime( lime, 'unknown');
-  });
-}
-
-function updateLimes( limeValues) {
-  ['her-status','my-status'].map(function(lime){
-    updateLime( lime, limeValues[lime] ? 'online' : 'offline');
-  });
-  updateHeart();
-}
-
-function updateLime( whichLime, limeText) {
-  $('#'+whichLime).html( limeText);
-}
-
-function updateHeart() {
-  var me = $('#my-status').html() == 'online';
-  var them = $('#her-status').html() == 'online';
-
-  if (me) {
-    $('#heart-left').removeClass('transparent');
-  } else {
-    $('#heart-left').addClass('transparent');
-  }
-
-  if (them) {
-    $('#heart-right').removeClass('transparent');
-  } else {
-    $('#heart-right').addClass('transparent');
-  }
-}
